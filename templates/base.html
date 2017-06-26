@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="full-height">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>{% block title %}Micasa{% endblock %}</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="{% static 'css/mdb.css' %}" rel="stylesheet">
+
+    <!-- Your custom styles (optional) -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    
+</head>
+
+<body class="indigo-skin intro-page band-lp">
+
+    <!--Navigation & Intro-->
+    <!--/Navigation & Intro-->
+    <!--Main content-->
+    {% block content %}{% endblock %}
+    <!--/Main content-->
+
+    {% include 'footer.html' %}
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script src="{% static 'js/tether.min.js' %}"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <!-- MDB core JavaScript -->
+    <script src="{% static 'js/mdb.js' %}"></script>
+
+    <script>    
+        //Animation init
+        new WOW().init();
+        
+        //Modal
+        $('#myModal').on('shown.bs.modal', function () {
+          $('#myInput').focus()
+        })
+        
+        // Material Select Initialization
+        $(document).ready(function() {
+            $('.mdb-select').material_select();
+        });
+        
+        // MDB Lightbox Init
+        $(function () {
+            // $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+            $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+        });
+        {% block script %}{% endblock %}
+    </script>
+    
+</body>
+
+</html>
