@@ -28,12 +28,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'storages',
-    'crispy_forms',
+    # 'crispy_forms',
     
     'promo',
 ]
 
-CRISPY_TEMPLATE_PACK = "bootstrap4"
+# CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -105,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'America/Edmonton' #'UTC'
+TIME_ZONE = 'UTC' #'America/Edmonton' 
 
 USE_I18N = True
 
