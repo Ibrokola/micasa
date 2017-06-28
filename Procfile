@@ -1,0 +1,1 @@
+web: gunicorn Micasa.wsgi --log-file -
