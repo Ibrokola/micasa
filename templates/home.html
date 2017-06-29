@@ -155,16 +155,18 @@
                 <hr class="between-sections">
                 <h2 class="pink-text font-up font-bold-2 mt-3 mb-2 wow fadeIn" data-wow-delay="0.2s">Songs</h2>
                 <p>Samples of some of Mi Casa's tracks</p>
-                <div class="row">
-                    {% for item in song_qs %}
-                    <div class="col-sm-4 mb-2 wow fadeIn" data-wow-delay="0.6s">
-                           <h4>{{ item.title }}</h4>
-                           <br>
-                           <audio controls>
-                               <source src="{{ item.audio.url }}" type="audio/mp3">
-                           </audio> 
+                <div class="container">
+                    <div class="row">
+                        {% for item in song_qs %}
+                        <div class="col-sm-4 mb-2 wow fadeIn" data-wow-delay="0.6s">
+                               <h4>{{ item.title }}</h4>
+                               <br>
+                               <audio controls>
+                                   <source src="{{ item.audio.url }}" type="audio/mp3">
+                               </audio> 
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
                 </div>
 
             </section>
