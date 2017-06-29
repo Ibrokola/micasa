@@ -40,6 +40,12 @@ class Discography(models.Model):
 	def __str__(self):
 		return self.title
 
+class Song(models.Model):
+	title = models.CharField(max_length=120, null=True, blank=True)
+	audio = models.FileField(upload_to='audio/', null=True, blank=True)
+
+	def __str__(self):
+		return self.title
 
 # class Video(models.Model):
 # 	title = models.CharField(max_length=120)
