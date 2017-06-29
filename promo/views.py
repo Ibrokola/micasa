@@ -14,7 +14,6 @@ class HomeView(View):
 		band_qs = BandProfile.objects.all().order_by('?')
 		page_qs = Page.objects.all().order_by('?')
 		song_qs = Song.objects.all().order_by('?')
-		print(song_qs)
 		context = {
 			"about_qs": about_qs,
 			"disco_qs": disco_qs,
