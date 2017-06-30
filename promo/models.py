@@ -86,14 +86,14 @@ class BandProfile(models.Model):
 	def __str__(self):
 		return self.name
 
-# class TourDate(models.Model):
-# 	title = models.CharField(max_length=120, verbose_name='Date')
-# 	country = models.CharField(max_length=120)
-# 	places = models.CharField(max_length=120)
-# 	tickets = models.CharField(max_length=500, null=True, blank=True)
+class Image(models.Model):
+	title = models.CharField(max_length=120)
+	image = models.ImageField(upload_to='images/', null=True, blank=True)
 
-# 	def __str__(self):
-# 		return self.title
+	def __str__(self):
+		return self.title
+
+
 
 class Contact(models.Model):
 	name = models.CharField(max_length=120, verbose_name='Your name')
